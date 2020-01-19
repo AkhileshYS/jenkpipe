@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages{
+        stage("Download code from github") {
+            steps {
+                echo "building pipe1"
+                build 'pipe1'
+            }
+        }
+        stage("build code pipe2") {
+            steps {
+                echo "building pipe2"
+                build 'pipe2'
+            }
+        }
+        stage("build code pipe3") {
+            steps {
+                echo "building pipe3"
+                build 'pipe3'
+            }
+        }
+    }
+}
